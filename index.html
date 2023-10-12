@@ -1,7 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body>
-<h1>Placeholder</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+    <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/67e997846c.js" crossorigin="anonymous"></script>
+
+        <style>
+            #mainContent {
+                -webkit-mask-image: linear-gradient(
+                transparent, 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                transparent);
+
+                mask-image: linear-gradient( transparent, 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                transparent);
+            }
+
+            @font-face {
+                font-family: customFont;
+                src: url(RobotoSlab-VariableFont_wght.ttf);
+            }
+
+            #mainBody {
+                font-family: customFont;
+            }
+
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #0f172a;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #475569;
+                
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #334155;
+            }
+        </style>
+    </head>
+    
+    <body id='mainBody' class='px-48 flex flex-col h-screen bg-gradient-to-tr from-slate-950 via-slate-900 to-blue-950'>
+        <!-- Header -->
+        <div class='pt-2 flex justify-center mt-7'>
+            <span class='text-4xl font-bold text-slate-300'>Colin Ardizzone</span>
+        </div>
+        <div class='flex justify-center'>
+            <span class='text-md font-bold text-slate-400'>Full-Stack Software Engineer</span>
+        </div>
+        <hr class='h-px my-4 bg-slate-400 border-0'>
+
+        <!-- Nav -->
+        <div class='py-2 text-lg flex justify-center text-slate-300'>
+            <button class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-slate-300 rounded'>About Me</button>
+            <button class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Education & Experience</button>
+            <button class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>My Work</button>
+        </div>
+
+        <!-- Main Body -->
+        <main id='mainContent' class='flex flex-grow flex-col pb-12 px-7 mt-4 py-3.5 text-slate-400 overflow-y-auto text-md'>
+            <div class='my-3.5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ac purus vitae consequat. Nam a fringilla nunc. Integer viverra finibus nisi, pulvinar laoreet massa. Curabitur vestibulum dictum sagittis. Aliquam semper tincidunt sagittis. Nulla volutpat ex nec odio tempus pretium. Nullam vel enim ac nunc molestie blandit sed eget quam. Quisque ac porttitor metus. Nunc et nisi nisl. Pellentesque sed condimentum lorem. Nunc sit amet laoreet dui. Maecenas cursus at ligula in auctor. Integer fermentum tortor erat, quis accumsan neque lacinia nec. Aliquam ut consectetur justo. Maecenas molestie tellus turpis. Suspendisse felis risus, ullamcorper vel mauris quis, suscipit venenatis purus.</div>
+            <div class='my-3.5'>Suspendisse interdum sem id urna congue malesuada. Pellentesque molestie urna at mi bibendum accumsan. Phasellus ex elit, euismod vitae dapibus at, maximus vitae nisi. Duis venenatis, nisi sed scelerisque tristique, enim ligula tincidunt nunc, sed tristique urna erat quis felis. Vivamus auctor dui eget eros pretium vestibulum. Proin vulputate venenatis elit non venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nulla enim, finibus ut elementum vel, vestibulum ac ex. Sed luctus porttitor justo bibendum mollis. Praesent blandit, lorem sit amet fringilla viverra, neque massa rutrum nisi, ut ornare urna ante id justo. Integer id varius dolor, vel congue nunc. Integer libero dolor, finibus at turpis at, venenatis luctus justo. Nunc quis dui quis dolor interdum facilisis ut id tellus. Maecenas varius ornare augue sed varius.</div>
+            <div class='my-3.5'>Morbi nisl neque, dignissim in pharetra quis, accumsan ac urna. Suspendisse in tellus rutrum, tincidunt justo a, accumsan lacus. Fusce efficitur, arcu eget condimentum malesuada, nisl mi malesuada tellus, a suscipit lorem ante consequat elit. Donec et erat interdum, maximus nisl eu, rhoncus sapien. Maecenas quis feugiat eros, vel fringilla mi. Morbi ut ex tincidunt sapien pretium malesuada vitae ac massa. Quisque sed vestibulum massa, eget aliquet ipsum. Sed sed mi mauris. Ut elementum tincidunt urna, placerat euismod lectus aliquam dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</div>
+            <div class='my-3.5'>Morbi nisl neque, dignissim in pharetra quis, accumsan ac urna. Suspendisse in tellus rutrum, tincidunt justo a, accumsan lacus. Fusce efficitur, arcu eget condimentum malesuada, nisl mi malesuada tellus, a suscipit lorem ante consequat elit. Donec et erat interdum, maximus nisl eu, rhoncus sapien. Maecenas quis feugiat eros, vel fringilla mi. Morbi ut ex tincidunt sapien pretium malesuada vitae ac massa. Quisque sed vestibulum massa, eget aliquet ipsum. Sed sed mi mauris. Ut elementum tincidunt urna, placerat euismod lectus aliquam dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</div>
+        </main>
+
+        <!-- Footer -->
+        <footer class='flex justify-center bg-slate-900 text-slate-500 text-2xl bg-opacity-0 pt-3.5 pb-2'>
+            <div class='flex justify-center my-1 rounded-lg bg-opacity-40 p-1 my-2'>
+                <a target='_blank' class='transition duration-150 mx-3.5 hover:text-slate-300' href='https://www.linkedin.com/in/colinardizzone/'><i class="fa-brands fa-linkedin"></i></a>
+                <a target='_blank' class='transition duration-150 mx-3.5 hover:text-slate-300' href='https://github.com/ColinArdizzone'><i class="fa-brands fa-github"></i></a>
+                <a target='_blank' class='transition duration-150 mx-3.5 hover:text-slate-300' href='mailto:colin.ardizzone@gmail.com'><i class="fa-solid fa-envelope"></i></i></a>
+            </div>
+        </footer>
+    </body>
 </html>
+<script>
+    $('.nav-button').on('click', function() {
+        $('.nav-button').each(function() {
+            $(this).addClass('border-opacity-0');
+            $(this).addClass('hover:underline');
+        });
+        $(this).removeClass('border-opacity-0');
+        $(this).removeClass('hover:underline');
+    });
+</script>
