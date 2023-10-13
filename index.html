@@ -1,7 +1,368 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Placeholder</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<!doctype html>
+<html style='background-color:#020617'>
+    <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/67e997846c.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous"></script>
+
+        <style>
+            #mainBody {
+                scroll-behavior: smooth;
+            }
+
+            .project {
+                cursor: pointer;
+            }
+
+            #mainContent {
+                -webkit-mask-image: linear-gradient(
+                transparent, 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                transparent);
+
+                mask-image: linear-gradient( transparent, 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1), 
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                rgba(0,0,0,1),
+                transparent);
+            }
+
+            @font-face {
+                font-family: customFont;
+                src: url(RobotoSlab-VariableFont_wght.ttf);
+            }
+
+            #mainBody {
+                font-family: customFont;
+            }
+
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #0f172a;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #475569;
+                
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #64748b;
+            }
+        </style>
+    </head>
+    
+    <body id='mainBody' class='px-48 font-light flex flex-col h-screen bg-gradient-to-tr from-slate-950 via-slate-900 to-blue-950'>
+        <!-- Header -->
+        <div id='nameTitle' class= 'px-7 flex mt-7 hidden'>
+            <span class='text-4xl font-bold text-slate-300'>Colin Ardizzone</span>
+        </div>
+        <div id='nameSubtitle' class='flex px-7 hidden'>
+            <span class='text-md font-bold text-slate-400'>Full-Stack Developer &#x2022; Crafting responsive, high performing applications</span>
+        </div>
+        <hr id='headerSplitter' class='h-px my-2 bg-slate-400 border-0 hidden'>
+
+        <!-- Nav -->
+        <div id='navButtons' class='py-2 text-lg flex text-slate-300 px-7'>
+            <a id='nav1' href='#aboutMe' class='hidden'>
+                <button id='nav1Button' data-section='aboutMe' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mr-2 border border-slate-300 rounded'>About Me</button>
+            </a>
+            <a id='nav2' href='#education' class='hidden'>
+                <button id='nav2Button' data-section='educationAndExperience' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Experience</button>
+            </a>
+            <a id='nav3' href='#projects' class='hidden'>
+                <button id='nav3Button' data-section='projects' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Projects</button>
+            </a>
+            <a id='nav4' href='#connect' class='hidden'>
+                <button id='nav4Button' data-section='connect' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Connect</button>
+            </a>
+        </div>
+
+        <!-- Main Body -->
+        <main id='mainContent' class='flex flex-grow flex-col pb-12 px-7 mt-2 py-3.5 text-slate-300 overflow-y-auto text-base hidden'>
+            <!-- About Me -->
+            <div id='aboutSection'>
+                <div id='aboutMe' class='aboutMe pt-8 mt-8'></div>
+                <div class='aboutMe my-3.5 text-slate-400'>
+                    Ten years ago I began my journey in programming when I decided I wanted to create my own computer game. I was instantly captivated by the way coding allowed me to creatively solve problems and create experiences that would be fun and satisfying for others to use.
+                </div>
+                <div class='aboutMe my-3.5 text-slate-400'>
+                    After studying computer science at the <a class='text-slate-300 font-normal' href='https://umd.edu' target='_blank'>University of Maryland</a>, I began my career as a web developer for a <a class='text-slate-300 font-normal' href='https://evanschambers.com/' target='_blank'>small company</a> based in D.C. that focused on delivering problem-solving solutions through software.
+                    In addition building some amazing software, I found enjoyment working closely with our users to help enhance their experience and deliver new use-cases back to the team. 
+                    Alongside a talented team, I've been able to continually grow my skillset, and in-turn mentor and share my experiences with junior members of our team.
+                </div>
+                <div class='aboutMeEnd my-3.5 text-slate-400'>
+                    Outside of work, I enjoy tennis, volleyball, and bouldering. Otherwise you'll find me gaming with friends.
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div id='expSection'>
+                <div id='education' class='relative flex pt-8 mt-16 mb-3.5 items-center w-full'>
+                    <div class='flex-grow border-t border-slate-300'></div>
+                    <span class='flex-shrink mx-4 text-slate-300 text-base sm:text-xl hidden' style='display: block;'>Experience</span>
+                    <div class='flex-grow border-t border-slate-300'></div>
+                </div>
+                <div class='my-3.5'>
+                    <a href='https://www.thecaraballogroup.com/' target='_blank'>
+                        <div class='opacity-80 bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 rounded border-slate-500'>
+                            <span class='text-base'>Front-End Developer @ The Caraballo Group <i class='fa-solid fa-arrow-up-right-from-square'></i></span>
+                            <span class='text-sm text-slate-500 float-right'>Experience</span>
+                            <div class='text-base'>May - July 2023</div>
+                            <br>
+                            <div class='text-base mb-1'><span>&#x2022;</span>  Delivered performant and responsive react code that faithfully recreated customer mockups and satisfied all required functionality. </div>
+                            <div class='text-base mb-1'><span>&#x2022;</span>  Collaborated closely with government stakeholders, demonstrating progress and providing deliverables on a bi-weekly basis. </div>
+                            <div class='text-base mb-1'><span>&#x2022;</span>  Rapidly came up to speed on an existing codebase in order to maintain high-quality code while successfully meeting the contract deadline. </div>
+                            <br>
+                            <div class='text-amber-400'>React &#x2022; Typescript &#x2022; TailwindCSS</div>
+                        </div>
+                    </a>
+
+                    <a href='https://evanschambers.com/' target='_blank'>
+                        <div class='opacity-80 bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 rounded border-slate-500'>
+                            <span class='text-base'>Full-Stack Developer @ Evans & Chambers Technology <i class='fa-solid fa-arrow-up-right-from-square'></i></span>
+                            <span class='text-sm text-slate-500 float-right'>Experience</span>
+                            <div class='text-base'>2018 - January 2023</div>
+                            <br>
+                            <div class='text-base mb-1'><span>&#x2022;</span> Led the development of several new features within a full-stack application, pleasing existing users while bringing in new clients. </div>
+                            <div class='text-base mb-1'><span>&#x2022;</span> Collaborated directly with customers to understand their needs while managing critical hotfixes to ensure a smooth user experience. </div>
+                            <div class='text-base mb-1'><span>&#x2022;</span> Contributed to all aspects of the application, ranging from performance optimizations to designing intuitive user interfaces. </div>
+                            <br>
+                            <div class='text-amber-400'>Groovy/Grails &#x2022; Java &#x2022; Spring &#x2022; HTML &#x2022; Bootstrap &#x2022; jQuery &#x2022; React &#x2022; SQL &#x2022; AWS</div>
+                        </div>
+                    </a>
+
+                    <a href='https://umd.edu/' target='_blank'>
+                        <div class='opacity-80 bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 rounded border-slate-500'>
+                            <span class='text-base'>Bachelor's in Computer Science @ University of Maryland, College Park <i class='fa-solid fa-arrow-up-right-from-square'></i></span>
+                            <span class='text-sm text-slate-500 float-right'>Education</span>
+                            <div class='text-base'>2014 - May 2018</div>
+                            <br>
+                            <div class='text-base mb-1'><span>&#x2022;</span> Computer science major with a concentration in mathematics. </div>
+                            <br>
+                            <div class='text-amber-400'>Java &#x2022; Ruby &#x2022; SQL </div>
+                        </div>
+                    </a>
+
+                    <div class='flex flex-row'>
+                        <div class='opacity-80 bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 mr-3.5 rounded border-slate-500'>
+                            <span class='text-base'>AWS Certified Solutions Architect</span>
+                            <span class='text-sm text-slate-500 float-right'>Certification</span>
+                            <div class='text-base'>2020 - November 2023</div>
+                            <br>
+                            <div class='text-amber-400'>AWS</div>
+                        </div>
+                        <div class='opacity-80 bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 ml-3.5 rounded border-slate-500'>
+                            <span class='text-base'>CMMI for Development v1.3</span>
+                            <span class='text-sm text-slate-500 float-right'>Certification</span>
+                            <div class='text-base'>2019</div>
+                            <br>
+                            <div class='text-amber-400'>CMMI &#x2022; Agile </div>
+                        </div>
+                    </div>
+                    <button class='mb-7 experienceEnd text-slate-400 border border-slate-400 hover:text-slate-300 hover:border-slate-300 transition hover:scale-105 active:scale-100 rounded px-2 py-1'>
+                        <i class="fa-regular fa-file-pdf"></i> Download Resume
+                    </button>
+                </div>
+            </div>
+
+            <div id='projSection'>
+                <div id='projects' class='relative flex pt-8 mt-16 mb-3.5 items-center w-full'>
+                    <div class='flex-grow border-t border-slate-300'></div>
+                    <span class='flex-shrink mx-4 text-slate-300 text-base sm:text-xl hidden' style='display: block;'>Projects</span>
+                    <div class='flex-grow border-t border-slate-300'></div>
+                </div>
+                <div class='my-3.5'>
+                    <div class='flex flex-row'>
+                        <div data-project='https://dodsecurity.com/seccon/' class='opacity-80 project flex flex-col bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 mr-3.5 rounded border-slate-500'>
+                            <span class='text-base'><i class="fa-solid fa-shield-halved"></i> Security Control <i class='fa-solid fa-arrow-up-right-from-square'></i></span>
+                            <span class='text-sm text-slate-500 float-right'>Professional</span>
+                            <div class='text-base'></div>
+                            <br>
+                            <div class='text-base flex-1'>Industry leading security information management product. </div>
+                            <br>
+                            <div class='text-amber-400'>Groovy/Grails &#x2022; Java &#x2022; Spring &#x2022; jQuery &#x2022; React &#x2022; SQL &#x2022; AWS</div>
+                        </div>
+                        <div data-project='https://poedle.com/' class='opacity-80 project flex flex-col bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 mx-3.5 rounded border-slate-500'>
+                            <span class='text-base'><i class="fa-solid fa-gem"></i> PoEdle <i class='fa-solid fa-arrow-up-right-from-square'></i></span>
+                            <span class='text-sm text-slate-500 float-right'>Personal</span>
+                            <div class='text-base'></div>
+                            <br>
+                            <div class='text-base flex-1'>A Wordle-inspired daily guessing game based on the online game, Path of Exile. </div>
+                            <br>
+                            <div class='text-amber-400'>Ruby on Rails &#x2022; jQuery &#x2022; TailwindCSS &#x2022; Chart.js &#x2022; SQL &#x2022; AWS</div>
+                        </div>
+                        <div data-project='https://colinardizzone.github.io/' class='opacity-80 project flex flex-col bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 ml-3.5 rounded border-slate-500'>
+                            <span class='text-base'><i class="fa-solid fa-laptop"></i> Personal Site v1 <i class='fa-solid fa-arrow-up-right-from-square'></i></span>
+                            <span class='text-sm text-slate-500 float-right'>Personal</span>
+                            <div class='text-base'></div>
+                            <br>
+                            <div class='text-base flex-1'>
+                                You are here! <br>
+                                <span style='font-size: 10px;'>You are here!</span>
+                                <br>
+                                <span style='font-size: 6px;'>You are here!</span>
+                                <br>
+                                <span style='font-size: 3px;'>You are here!</span>
+                            </div>
+                            <br>
+                            <div class='text-amber-400'>jQuery &#x2022; TailwindCSS</div>
+                        </div>
+                    </div>
+                    <a href='https://github.com/ColinArdizzone' class='projectsEnd' target='_blank'>
+                        <button class='mb-7 text-slate-400 border border-slate-400 hover:text-purple-400 hover:border-purple-400 transition hover:scale-105 active:scale-100 rounded px-2 py-1'>
+                            <i class="fa-brands fa-github"></i> View Github
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div id='connectSection'>
+                <div id='connect' class='relative flex pt-8 mt-16 mb-3.5 items-center w-full'>
+                    <div class='flex-grow border-t border-slate-300'></div>
+                    <span class='flex-shrink mx-4 text-slate-300 text-base sm:text-xl hidden' style='display: block;'>Connect</span>
+                    <div class='flex-grow border-t border-slate-300'></div>
+                </div>
+                <div class='my-3.5 text-slate-400'>
+                    I'm currently searching for new opportunities! Whether you're looking to talk shop, have a question, or just want to say hi, feel free to reach out! 
+                </div>
+                <div class='my-3.5 text-slate-400 connectEnd'>
+                    The best way to reach me is either directly via <a target='_blank' class='text-slate-300 font-normal' href='mailto:colin.ardizzone@gmail.com'>email</a>, or you can connect with me on <a target='_blank' class='text-slate-300 font-normal' href='https://www.linkedin.com/in/colinardizzone/'>LinkedIn</a>!
+                </div>
+
+                <div class='pt-96 text-slate-500 text-sm'>
+                    Created by Colin Ardizzone &#x2022; Under Construction
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id='footer' class='flex justify-center bg-slate-900 text-slate-500 text-2xl bg-opacity-0 pb-1 hidden'>
+            <div class='flex justify-center my-1 rounded-lg bg-opacity-40 p-1 my-2'>
+                <a target='_blank' class='transition duration-150 mx-3.5 hover:text-blue-400' href='https://www.linkedin.com/in/colinardizzone/'><i class="fa-brands fa-linkedin"></i></a>
+                <a target='_blank' class='transition duration-150 mx-3.5 hover:text-purple-400' href='https://github.com/ColinArdizzone'><i class="fa-brands fa-github"></i></a>
+                <a target='_blank' class='transition duration-150 mx-3.5 hover:text-slate-300' href='mailto:colin.ardizzone@gmail.com'><i class="fa-solid fa-envelope"></i></i></a>
+            </div>
+        </footer>
+    </body>
 </html>
+<script>
+    var currentNav = '#nav1';
+    $('.nav-button').on('click', function() {
+        $('.nav-button').each(function() {
+            $(this).addClass('border-opacity-0');
+            $(this).addClass('hover:underline');
+        });
+        $(this).removeClass('border-opacity-0');
+        $(this).removeClass('hover:underline');
+    });
+
+    // anime({
+    //     targets: '#navButtons',
+    //     translateX: 250,
+    //     direction: 'alternate',
+    //     easing: 'easeInOutSine'
+    // });
+
+    // Animating Page Load
+    $(document).ready(function () {
+        $('#nameTitle').fadeIn(1500).removeClass('hidden');
+        $('#nameSubtitle').fadeIn(1500).removeClass('hidden');
+        $('#nav1').trigger('click');
+
+        setTimeout(function(){
+            $('#headerSplitter').toggle('slide');
+            // $('#headerSplitter').fadeIn(1500).removeClass('hidden');
+        }, 500);
+
+        setTimeout(function(){
+            $('#nav1').fadeIn(1500).removeClass('hidden');
+        }, 1000);
+
+        setTimeout(function(){
+            $('#nav2').fadeIn(1500).removeClass('hidden');
+        }, 1200);
+
+        setTimeout(function(){
+            $('#nav3').fadeIn(1500).removeClass('hidden');
+        }, 1400);
+
+        setTimeout(function(){
+            $('#nav4').fadeIn(1500).removeClass('hidden');
+        }, 1600);
+
+        setTimeout(function(){
+            $('#mainContent').fadeIn(1500).removeClass('hidden');
+            $('#footer').fadeIn(3000).removeClass('hidden');
+        }, 2000);
+    });
+
+    $('.project').on('click', function(){
+        var url = $(this).data('project');
+
+        window.open(url, '_blank');
+    });
+
+    function isScrolledIntoView (el, holder) {
+        holder = holder || document.body
+        const { top, bottom, height } = el.getBoundingClientRect()
+        const holderRect = holder.getBoundingClientRect()
+
+        return top <= holderRect.top
+            ? holderRect.top - top <= height
+            : bottom - holderRect.bottom <= height
+    }
+
+    $('#mainContent').on( 'scroll', function() {
+        var newNav = '';
+        if (isScrolledIntoView(document.getElementById('aboutSection'), document.getElementById('mainContent'))) {
+            newNav = '#nav1';
+        } else if (isScrolledIntoView(document.getElementById('expSection'), document.getElementById('mainContent'))) {
+            newNav = '#nav2';
+        } else if (isScrolledIntoView(document.getElementById('projSection'), document.getElementById('mainContent'))) {
+            newNav = '#nav3';
+        } else if (isScrolledIntoView(document.getElementById('connectSection'), document.getElementById('mainContent'))) {
+            newNav = '#nav4';
+        }
+
+        // Auto update nav if user is scrolling
+        if (newNav != currentNav) {
+            currentNav = newNav;
+
+            $('.nav-button').each(function() {
+                $(this).addClass('border-opacity-0');
+                $(this).addClass('hover:underline');
+            });
+
+            $(newNav + 'Button').removeClass('border-opacity-0');
+            $(newNav + 'Button').removeClass('hover:underline');
+        }
+    });
+</script>
