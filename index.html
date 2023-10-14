@@ -91,17 +91,17 @@
 
         <!-- Nav -->
         <div id='navButtons' class='py-2 text-lg flex text-slate-300 px-7'>
-            <a id='nav1' href='#aboutMe' class='hidden'>
-                <button id='nav1Button' data-section='aboutMe' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mr-2 border border-slate-300 rounded'>About Me</button>
+            <a id='nav1' class='hidden'>
+                <button id='nav1Button' data-section='aboutSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mr-2 border border-slate-300 rounded'>About Me</button>
             </a>
-            <a id='nav2' href='#education' class='hidden'>
-                <button id='nav2Button' data-section='educationAndExperience' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Experience</button>
+            <a id='nav2' class='hidden'>
+                <button id='nav2Button' data-section='expSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Experience</button>
             </a>
-            <a id='nav3' href='#projects' class='hidden'>
-                <button id='nav3Button' data-section='projects' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Projects</button>
+            <a id='nav3' class='hidden'>
+                <button id='nav3Button' data-section='projSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Projects</button>
             </a>
-            <a id='nav4' href='#connect' class='hidden'>
-                <button id='nav4Button' data-section='connect' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Connect</button>
+            <a id='nav4' class='hidden'>
+                <button id='nav4Button' data-section='connectSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Connect</button>
             </a>
         </div>
 
@@ -257,7 +257,7 @@
                     The best way to reach me is either directly via <a target='_blank' class='text-slate-300 font-normal' href='mailto:colin.ardizzone@gmail.com'>email</a>, or you can connect with me on <a target='_blank' class='text-slate-300 font-normal' href='https://www.linkedin.com/in/colinardizzone/'>LinkedIn</a>!
                 </div>
 
-                <div class='pt-96 text-slate-500 text-sm'>
+                <div class='pt-96 mt-48 text-slate-500 text-sm'>
                     Created by Colin Ardizzone &#x2022; Under Construction
                 </div>
             </div>
@@ -280,8 +280,12 @@
             $(this).addClass('border-opacity-0');
             $(this).addClass('hover:underline');
         });
-        $(this).removeClass('border-opacity-0');
-        $(this).removeClass('hover:underline');
+        // $(this).removeClass('border-opacity-0');
+        // $(this).removeClass('hover:underline');
+
+        // Smooth Scroll
+        document.getElementById($(this).data('section')).scrollIntoView({ behavior: 'smooth'});
+
     });
 
     // anime({
