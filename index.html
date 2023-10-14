@@ -88,7 +88,7 @@
         </style>
     </head>
     
-    <body id='mainBody' class='w-11/12 md:w-7/12 m-auto flex flex-col h-screen'>
+    <body id='mainBody' class='w-11/12 md:w-9/12 lg:w-7/12 m-auto flex flex-col h-screen'>
         <!-- Header -->
             <div id='nameTitle' class='px-7 flex mt-7 hidden'>
                 <a href='https://colinardizzone.github.io/'>
@@ -103,16 +103,24 @@
         <!-- Nav -->
         <div id='navButtons' class='py-2 text-lg flex text-slate-300 px-7'>
             <a id='nav1' class='hidden'>
-                <button id='nav1Button' data-button='#nav1' data-section='aboutSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mr-2 border border-slate-300 rounded'>About Me</button>
+                <button id='nav1Button' data-button='#nav1' data-section='aboutSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mr-2 border border-slate-300 rounded'>
+                    <i class="fa-solid fa-house"></i><span class='ml-2 hidden md:block lg:inline'>About Me</span>
+                </button>
             </a>
             <a id='nav2' class='hidden'>
-                <button id='nav2Button' data-button='#nav2' data-section='expSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Experience</button>
+                <button id='nav2Button' data-button='#nav2' data-section='expSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>
+                    <i class="fa-solid fa-graduation-cap"></i><span class='ml-2  hidden md:block lg:inline'>Experience</span>
+                </button>
             </a>
             <a id='nav3' class='hidden'>
-                <button id='nav3Button' data-button='#nav3' data-section='projSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Projects</button>
+                <button id='nav3Button' data-button='#nav3' data-section='projSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>
+                    <i class="fa-solid fa-diagram-project"></i><span class='ml-2  hidden md:block lg:inline'>Projects</span>
+                </button>
             </a>
             <a id='nav4' class='hidden'>
-                <button id='nav4Button' data-button='#nav4' data-section='connectSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Connect</button>
+                <button id='nav4Button' data-button='#nav4' data-section='connectSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>
+                    <i class="fa-solid fa-comment"></i><span class='ml-2  hidden md:block lg:inline'>Connect</span>
+                </button>
             </a>
         </div>
 
@@ -122,7 +130,7 @@
             <div id='aboutSection'>
                 <div id='aboutMe' class='aboutMe pt-8 mt-8'></div>
                 <div class='aboutMe my-3.5 text-slate-400'>
-                    Ten years ago I began my journey in programming when I decided I wanted to create my own computer game. I was instantly captivated by the way coding allowed me to creatively solve problems and create experiences that would be fun and satisfying for others to use.
+                    10 years ago I began my journey in programming when I decided I wanted to create my own computer game. I was instantly captivated by the way coding allowed me to creatively solve problems and create software that could bring value in many ways.
                 </div>
                 <div class='aboutMe my-3.5 text-slate-400'>
                     After studying computer science at the <a class='text-slate-300 font-normal' href='https://umd.edu' target='_blank'>University of Maryland</a>, I began my career as a web developer for a <a class='text-slate-300 font-normal' href='https://evanschambers.com/' target='_blank'>small company</a> based in D.C. that focused on delivering problem-solving solutions through software.
@@ -152,7 +160,7 @@
                             <div class='text-base mb-1'><span>&#x2022;</span>  Collaborated closely with government stakeholders, demonstrating progress and providing deliverables on a bi-weekly basis. </div>
                             <div class='text-base mb-1'><span>&#x2022;</span>  Rapidly came up to speed on an existing codebase in order to maintain high-quality code while successfully meeting the contract deadline. </div>
                             <br>
-                            <div class='text-amber-400'>React &#x2022; Typescript &#x2022; TailwindCSS</div>
+                            <div class='text-amber-400 text-sm'>React &#x2022; Typescript &#x2022; TailwindCSS</div>
                         </div>
                     </a>
 
@@ -166,7 +174,7 @@
                             <div class='text-base mb-1'><span>&#x2022;</span> Collaborated directly with customers to understand their needs while managing critical hotfixes to ensure a smooth user experience. </div>
                             <div class='text-base mb-1'><span>&#x2022;</span> Contributed to all aspects of the application, ranging from performance optimizations to designing intuitive user interfaces. </div>
                             <br>
-                            <div class='text-amber-400'>Groovy/Grails &#x2022; Java &#x2022; Spring &#x2022; HTML &#x2022; Bootstrap &#x2022; jQuery &#x2022; React &#x2022; SQL &#x2022; AWS</div>
+                            <div class='text-amber-400 text-sm'>Groovy/Grails &#x2022; Java &#x2022; Spring &#x2022; HTML &#x2022; Bootstrap &#x2022; jQuery &#x2022; React &#x2022; SQL &#x2022; AWS</div>
                         </div>
                     </a>
 
@@ -178,24 +186,24 @@
                             <br>
                             <div class='text-base mb-1'><span>&#x2022;</span> Computer science major with a concentration in mathematics. </div>
                             <br>
-                            <div class='text-amber-400'>Java &#x2022; Ruby &#x2022; SQL </div>
+                            <div class='text-amber-400 text-sm'>Java &#x2022; Ruby &#x2022; SQL </div>
                         </div>
                     </a>
 
-                    <div class='flex flex-row'>
-                        <div class='opacity-80 bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 mr-3.5 rounded border-slate-500'>
+                    <div class='flex lg:flex-row flex-col '>
+                        <div class='opacity-80 bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 lg:mr-3.5 rounded border-slate-500'>
                             <span class='text-base'>AWS Certified Solutions Architect</span>
                             <span class='text-sm text-slate-500 float-right'>Certification</span>
                             <div class='text-base'>2020 - November 2023</div>
                             <br>
-                            <div class='text-amber-400'>AWS</div>
+                            <div class='text-amber-400 text-sm'>AWS</div>
                         </div>
-                        <div class='opacity-80 bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 ml-3.5 rounded border-slate-500'>
+                        <div class='opacity-80 bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 lg:ml-3.5 rounded border-slate-500'>
                             <span class='text-base'>CMMI for Development v1.3</span>
                             <span class='text-sm text-slate-500 float-right'>Certification</span>
                             <div class='text-base'>2019</div>
                             <br>
-                            <div class='text-amber-400'>CMMI &#x2022; Agile </div>
+                            <div class='text-amber-400 text-sm'>CMMI &#x2022; Agile </div>
                         </div>
                     </div>
                     <button class='mb-7 experienceEnd text-slate-400 border border-slate-400 hover:text-slate-300 hover:border-slate-300 transition hover:scale-105 active:scale-100 rounded px-2 py-1'>
@@ -211,26 +219,26 @@
                     <div class='flex-grow border-t border-slate-300'></div>
                 </div>
                 <div class='my-3.5'>
-                    <div class='flex md:flex-row flex-col'>
-                        <div data-project='https://dodsecurity.com/seccon/' class='opacity-80 project flex flex-col bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 md:mr-3.5 rounded border-slate-500'>
+                    <div class='flex lg:flex-row flex-col'>
+                        <div data-project='https://dodsecurity.com/seccon/' class='opacity-80 project flex flex-col bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 lg:mr-3.5 rounded border-slate-500'>
                             <span class='text-base'><i class="fa-solid fa-shield-halved"></i> Security Control <i class='fa-solid fa-arrow-up-right-from-square'></i></span>
                             <span class='text-sm text-slate-500 float-right'>Professional</span>
                             <div class='text-base'></div>
                             <br>
                             <div class='text-base flex-1'>Industry leading security information management product. </div>
                             <br>
-                            <div class='text-amber-400'>Groovy/Grails &#x2022; Java &#x2022; Spring &#x2022; jQuery &#x2022; React &#x2022; SQL &#x2022; AWS</div>
+                            <div class='text-amber-400 text-sm'>Groovy/Grails &#x2022; Java &#x2022; Spring &#x2022; jQuery &#x2022; React &#x2022; SQL &#x2022; AWS</div>
                         </div>
-                        <div data-project='https://poedle.com/' class='opacity-80 project flex flex-col bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 md:mx-3.5 rounded border-slate-500'>
+                        <div data-project='https://poedle.com/' class='opacity-80 project flex flex-col bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 lg:mx-3.5 rounded border-slate-500'>
                             <span class='text-base'><i class="fa-solid fa-gem"></i> PoEdle <i class='fa-solid fa-arrow-up-right-from-square'></i></span>
                             <span class='text-sm text-slate-500 float-right'>Personal</span>
                             <div class='text-base'></div>
                             <br>
                             <div class='text-base flex-1'>A Wordle-inspired daily guessing game based on the online game, Path of Exile. </div>
                             <br>
-                            <div class='text-amber-400'>Ruby on Rails &#x2022; jQuery &#x2022; TailwindCSS &#x2022; Chart.js &#x2022; SQL &#x2022; AWS</div>
+                            <div class='text-amber-400 text-sm'>Ruby on Rails &#x2022; jQuery &#x2022; TailwindCSS &#x2022; Chart.js &#x2022; SQL &#x2022; AWS</div>
                         </div>
-                        <div data-project='https://colinardizzone.github.io/' class='opacity-80 project flex flex-col bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 md:ml-3.5 rounded border-slate-500'>
+                        <div data-project='https://colinardizzone.github.io/' class='opacity-80 project flex flex-col bg-slate-800 hover:bg-slate-700 w-full transition ease-in-out overflow-x-auto p-3.5 mb-7 lg:ml-3.5 rounded border-slate-500'>
                             <span class='text-base'><i class="fa-solid fa-laptop"></i> Personal Site v1 <i class='fa-solid fa-arrow-up-right-from-square'></i></span>
                             <span class='text-sm text-slate-500 float-right'>Personal</span>
                             <div class='text-base'></div>
@@ -244,7 +252,7 @@
                                 <span style='font-size: 3px;'>You are here!</span>
                             </div>
                             <br>
-                            <div class='text-amber-400'>jQuery &#x2022; TailwindCSS</div>
+                            <div class='text-amber-400 text-sm'>jQuery &#x2022; TailwindCSS</div>
                         </div>
                     </div>
                     <a href='https://github.com/ColinArdizzone' class='projectsEnd' target='_blank'>
@@ -337,6 +345,7 @@
 
         setTimeout(function(){
             $('#mainContent').fadeIn(1500).removeClass('hidden');
+            document.getElementById('aboutSection').scrollIntoView();
             $('#footer').fadeIn(3000).removeClass('hidden');
         }, 2000);
     });
