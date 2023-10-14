@@ -79,7 +79,7 @@
         </style>
     </head>
     
-    <body id='mainBody' class='w-11/12 md:w-7/12 m-auto font-light flex flex-col h-screen'>
+    <body id='mainBody' class='w-11/12 md:w-7/12 m-auto flex flex-col h-screen'>
         <!-- Header -->
         <div id='nameTitle' class= 'px-7 flex mt-7 hidden'>
             <span class='text-4xl font-bold text-slate-300'>Colin Ardizzone</span>
@@ -92,16 +92,16 @@
         <!-- Nav -->
         <div id='navButtons' class='py-2 text-lg flex text-slate-300 px-7'>
             <a id='nav1' class='hidden'>
-                <button id='nav1Button' data-section='aboutSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mr-2 border border-slate-300 rounded'>About Me</button>
+                <button id='nav1Button' data-button='#nav1' data-section='aboutSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mr-2 border border-slate-300 rounded'>About Me</button>
             </a>
             <a id='nav2' class='hidden'>
-                <button id='nav2Button' data-section='expSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Experience</button>
+                <button id='nav2Button' data-button='#nav2' data-section='expSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Experience</button>
             </a>
             <a id='nav3' class='hidden'>
-                <button id='nav3Button' data-section='projSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Projects</button>
+                <button id='nav3Button' data-button='#nav3' data-section='projSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Projects</button>
             </a>
             <a id='nav4' class='hidden'>
-                <button id='nav4Button' data-section='connectSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Connect</button>
+                <button id='nav4Button' data-button='#nav4' data-section='connectSection' class='transition duration-500 nav-button bg-transparent font-semibold py-1 px-4 mx-2 border border-opacity-0 hover:underline border-slate-300 rounded'>Connect</button>
             </a>
         </div>
 
@@ -277,8 +277,10 @@
     var currentNav = '#nav1';
     $('.nav-button').on('click', function() {
         $('.nav-button').each(function() {
-            $(this).addClass('border-opacity-0');
-            $(this).addClass('hover:underline');
+            if (currentNav != $(this).data('button')) {
+                $(this).addClass('border-opacity-0');
+                $(this).addClass('hover:underline');
+            }
         });
         // $(this).removeClass('border-opacity-0');
         // $(this).removeClass('hover:underline');
