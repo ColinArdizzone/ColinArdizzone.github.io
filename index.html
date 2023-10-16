@@ -31,7 +31,7 @@
                 font-family: bodyFont;
             }
 
-            #nameTitle, #nameSubtitle, #aboutSection {
+            #nameTitle, #nameSubtitle, #aboutSection, #logo {
                 font-family: titleFont;
             }
 
@@ -61,6 +61,7 @@
     
     <body id='mainBody' class=''>   
         <nav class='bg-slate-100 shadow-2xl bg-opacity-10 sticky top-0 z-50 p-3.5 text-slate-300 overflow-y-auto backdrop-blur-sm text-base' style='transition: top 0.3s;' id='navbar'>
+            <a href="javascript:location.reload();" id='logo' class='text-2xl p-2 opacity-0 underline transition hover:scale-105 active:scale-100 duration-250'>CA</a>
             <div class='float-right'>
                 <a id='nav1' class='opacity-0'>
                     <button id='nav1Button' data-button='#nav1' data-section='aboutSection' class='transition hover:scale-105 active:scale-100 duration-250 nav-button bg-transparent font-semibold py-1 px-4 mr-2 underline rounded'>
@@ -91,7 +92,7 @@
             <div id='aboutSection' class='min-h-[100vh] pt-16'>
                     <div id='nameIntro' class='pl-4 text-sky-400 text-lg hidden'>Hey, I'm</div>
                     <div id='nameTitle' class='text-5xl hidden'>Colin Ardizzone</div>
-                    <div id='nameSubtitle' class='text-2xl pl-24 text-slate-500 hidden'>Full-Stack Developer</div>
+                    <div id='nameSubtitle' class='text-xl pl-36 text-slate-500 hidden'>Full-Stack Developer</div>
                     <div id='aboutMe' class='pt-8 opacity-0'>
                         <div class='aboutMe my-3.5 text-slate-400'>
                             When I began my journey into coding 10 years ago, I was instantly captivated by the way it allowed me to creatively solve problems and build awesome tools.
@@ -123,8 +124,9 @@
                     </div>
             </div>
 
+            <div class='break h-[10vh] lg:hidden'></div>
             <!-- Education -->
-            <div id='expSection' class='opacity-0 min-h-[100vh]'>
+            <div id='expSection' class='opacity-0'>
                 <div id='education' class='relative flex mt-8 mb-3.5 items-center w-full'>
                     <div class='flex-grow border-t border-slate-300'></div>
                     <span class='flex-shrink mx-4 text-slate-300 text-base sm:text-xl hidden' style='display: block;'>Experience</span>
@@ -196,7 +198,7 @@
             <div class='break h-[10vh]'></div>
 
             <!-- Projects -->
-            <div id='projSection' class='opacity-0 min-h-[100vh]'>
+            <div id='projSection' class='opacity-0'>
                 <div id='projects' class='relative flex mt-8 mb-3.5 items-center w-full'>
                     <div class='flex-grow border-t border-slate-300'></div>
                     <span class='flex-shrink mx-4 text-slate-300 text-base sm:text-xl hidden' style='display: block;'>Projects</span>
@@ -249,7 +251,7 @@
 
             <div class='break h-[10vh]'></div>
             <!-- Connect -->
-            <div id='connectSection' class='opacity-0 min-h-[100vh]'>
+            <div id='connectSection' class='opacity-0'>
                 <div id='connect' class='relative flex mt-8 mb-3.5 items-center w-full'>
                     <div class='flex-grow border-t border-slate-300'></div>
                     <span class='flex-shrink mx-4 text-slate-300 text-base sm:text-xl hidden' style='display: block;'>Connect</span>
@@ -259,7 +261,7 @@
                     I'm currently searching for new opportunities! Whether you're looking to talk shop, have a question, or just want to say hi, feel free to reach out! 
                 </div>
                 <div class='my-3.5 text-slate-400 connectEnd'>
-                    The best way to reach me is either directly via <a target='_blank' class='text-slate-300 font-normal' href='mailto:colin.ardizzone@gmail.com'>email</a>, or you can connect with me on <a target='_blank' class='text-slate-300 font-normal' href='https://www.linkedin.com/in/colinardizzone/'>LinkedIn</a>!
+                    The best way to reach me is either directly via <a target='_blank' class='text-sky-400 font-normal' href='mailto:colin.ardizzone@gmail.com'>email</a>, or you can connect with me on <a target='_blank' class='text-sky-400 font-normal' href='https://www.linkedin.com/in/colinardizzone/'>LinkedIn</a>!
                 </div>
 
                 <div class='pt-96 mt-48 text-slate-500 text-sm'>
@@ -284,6 +286,9 @@
     $(document).ready(function () {
 
         // Fade In Buttons
+        setTimeout(function(){
+            $('#logo').animate({ opacity: 1 }, 500);
+        }, 50);
         setTimeout(function(){
             $('#nav1').animate({ opacity: 1 }, 500);
         }, 250);
