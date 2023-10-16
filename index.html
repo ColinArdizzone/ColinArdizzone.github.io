@@ -27,11 +27,11 @@
                 src: url(RobotoSlab-VariableFont_wght.ttf);
             }
 
-            #expSection, #projSection, #connectSection, #navButtons, #navbar {
+            #expSection, #projSection, #navButtons, #navbar, #footer {
                 font-family: bodyFont;
             }
 
-            #nameTitle, #nameSubtitle, #aboutSection, #logo {
+            #nameTitle, #nameSubtitle, #aboutSection,  #connectSection, #logo {
                 font-family: titleFont;
             }
 
@@ -64,22 +64,22 @@
             <a href="javascript:location.reload();" id='logo' class='text-2xl p-2 opacity-0 underline transition hover:scale-105 active:scale-100 duration-250'>CA</a>
             <div class='float-right'>
                 <a id='nav1' class='opacity-0'>
-                    <button id='nav1Button' data-button='#nav1' data-section='aboutSection' class='transition hover:scale-105 active:scale-100 duration-250 nav-button bg-transparent py-1 px-4 mr-2 underline rounded'>
+                    <button id='nav1Button' data-button='#nav1' data-section='aboutSection' class='transition hover:scale-105 active:scale-100 duration-250 nav-button bg-transparent font-semibold py-1 px-4 mr-2 underline rounded'>
                         <i class="fa-solid fa-house"></i><span class='ml-2 hidden md:block lg:inline'>About Me</span>
                     </button>
                 </a>
                 <a id='nav2' class='opacity-0'>
-                    <button id='nav2Button' data-button='#nav2' data-section='expSection' class='transition hover:scale-105 active:scale-100 duration-250 nav-button bg-transparent py-1 px-4 mx-2 hover:text-slate-300 rounded'>
+                    <button id='nav2Button' data-button='#nav2' data-section='expSection' class='transition hover:scale-105 active:scale-100 duration-250 nav-button bg-transparent font-semibold py-1 px-4 mx-2 hover:text-slate-300 rounded'>
                         <i class="fa-solid fa-graduation-cap"></i><span class='ml-2  hidden md:block lg:inline'>Experience</span>
                     </button>
                 </a>
                 <a id='nav3' class='opacity-0'>
-                    <button id='nav3Button' data-button='#nav3' data-section='projSection' class='transition hover:scale-105 active:scale-100 duration-250 nav-button bg-transparent py-1 px-4 mx-2 hover:text-slate-300 rounded'>
+                    <button id='nav3Button' data-button='#nav3' data-section='projSection' class='transition hover:scale-105 active:scale-100 duration-250 nav-button bg-transparent font-semibold py-1 px-4 mx-2 hover:text-slate-300 rounded'>
                         <i class="fa-solid fa-diagram-project"></i><span class='ml-2  hidden md:block lg:inline'>Projects</span>
                     </button>
                 </a>
                 <a id='nav4' class='opacity-0'>
-                    <button id='nav4Button' data-button='#nav4' data-section='connectSection' class='transition hover:scale-105 active:scale-100 duration-250 nav-button bg-transparent py-1 px-4 mx-2 hover:text-slate-300 rounded'>
+                    <button id='nav4Button' data-button='#nav4' data-section='connectSection' class='transition hover:scale-105 active:scale-100 duration-250 nav-button bg-transparent font-semibold py-1 px-4 mx-2 hover:text-slate-300 rounded'>
                         <i class="fa-solid fa-comment"></i><span class='ml-2  hidden md:block lg:inline'>Connect</span>
                     </button>
                 </a>
@@ -98,7 +98,7 @@
                             When I began my journey into coding 10 years ago, I was instantly captivated by the way it allowed me to creatively solve problems and build awesome tools.
                         </div>
                         <div class='aboutMe my-3.5 text-slate-400'>
-                            After studying computer science at the <a class='text-sky-400 font-normal' href='https://umd.edu' target='_blank'>University of Maryland</a>, I began my career as a web developer for a <a class='text-sky-400 font-normal' href='https://evanschambers.com/' target='_blank'>small company</a> based in D.C. that focused on delivering problem-solving solutions through software.
+                            After studying computer science at the University of Maryland, I began my career as a web developer for a small company based in D.C. that focused on delivering problem-solving solutions through software.
                             In addition building some amazing software, I found enjoyment working alongside our users to help enhance their experience while bringing new ideas back to the team. 
                             Alongside a talented team, I've been able to continually grow my skillset, and in-turn mentor and share my experiences with junior members of our team.
                         </div>
@@ -124,7 +124,7 @@
                     </div>
             </div>
 
-            <div class='break h-[10vh] lg:hidden'></div>
+            <div class='break h-[15vh] lg:hidden'></div>
             <!-- Education -->
             <div id='expSection' class='opacity-0'>
                 <div id='education' class='relative flex mt-8 mb-3.5 items-center w-full'>
@@ -195,7 +195,7 @@
                 </div>
             </div>
 
-            <div class='break h-[10vh]'></div>
+            <div class='break h-[15vh]'></div>
 
             <!-- Projects -->
             <div id='projSection' class='opacity-0'>
@@ -249,7 +249,7 @@
                 </div>
             </div>
 
-            <div class='break h-[10vh]'></div>
+            <div class='break h-[15vh]'></div>
             <!-- Connect -->
             <div id='connectSection' class='opacity-0'>
                 <div id='connect' class='relative flex mt-8 mb-3.5 items-center w-full'>
@@ -261,22 +261,19 @@
                     I'm currently searching for new opportunities! Whether you're looking to talk shop, have a question, or just want to say hi, feel free to reach out! 
                 </div>
                 <div class='my-3.5 text-slate-400 connectEnd'>
-                    The best way to reach me is either directly via <a target='_blank' class='text-sky-400 font-normal' href='mailto:colin.ardizzone@gmail.com'>email</a>, or you can connect with me on <a target='_blank' class='text-sky-400 font-normal' href='https://www.linkedin.com/in/colinardizzone/'>LinkedIn</a>!
+                    The best way to reach me is either directly via email, or you can connect with me on LinkedIn</a>!
                 </div>
-
-                <div class='pt-96 mt-48 text-slate-500 text-sm'>
-                    Created by Colin Ardizzone &#x2022; Under Construction
+                <div class='flex justify-center my-1 rounded-lg pt-7 text-slate-400 bg-opacity-40 text-3xl p-1 my-2'>
+                    <a target='_blank' class='transition duration-150 mx-3.5 hover:text-blue-400' href='https://www.linkedin.com/in/colinardizzone/'><i class="fa-brands fa-linkedin"></i></a>
+                    <a target='_blank' class='transition duration-150 mx-3.5 hover:text-purple-400' href='https://github.com/ColinArdizzone'><i class="fa-brands fa-github"></i></a>
+                    <a target='_blank' class='transition duration-150 mx-3.5 hover:text-slate-300' href='mailto:colin.ardizzone@gmail.com'><i class="fa-solid fa-envelope"></i></i></a>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
-        <footer id='footer' class='flex justify-center bg-slate-900 text-slate-500 text-2xl bg-opacity-0 pb-1'>
-            <div class='flex justify-center my-1 rounded-lg bg-opacity-40 p-1 my-2'>
-                <a target='_blank' class='transition duration-150 mx-3.5 hover:text-blue-400' href='https://www.linkedin.com/in/colinardizzone/'><i class="fa-brands fa-linkedin"></i></a>
-                <a target='_blank' class='transition duration-150 mx-3.5 hover:text-purple-400' href='https://github.com/ColinArdizzone'><i class="fa-brands fa-github"></i></a>
-                <a target='_blank' class='transition duration-150 mx-3.5 hover:text-slate-300' href='mailto:colin.ardizzone@gmail.com'><i class="fa-solid fa-envelope"></i></i></a>
-            </div>
+        <footer id='footer' class='uppercase flex justify-center mt-48 bg-slate-900 text-slate-600 text-xs bg-opacity-0 pb-3.5'>
+            Designed & Built by Colin Ardizzone &#x2022; Under Construction
         </footer>
         </div>
     </body>
@@ -323,7 +320,6 @@
         var url = $(this).data('project');
         window.open(url, '_blank');
     });
-
 
     var prevScrollpos = window.pageYOffset;
     var currentNav = 'nav1';
