@@ -1,6 +1,2 @@
-# Ignore tailwind config and CLI
-tailwind.config.js
+# Ignore tailwind CLI if in the same directory 
 tailwindcss
-
-# Ignore notes
-notes.txt
